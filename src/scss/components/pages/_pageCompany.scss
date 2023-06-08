@@ -1,0 +1,40 @@
+.pageCompany {
+
+
+  .sectionText {
+
+    &__container {
+      margin-bottom: 130px;
+
+      @include tablet {
+        margin-bottom: 100px;
+      }
+
+      @include mobile {
+        margin-bottom: 70px;
+      }
+    }
+
+    &__content {
+      max-width: 888px;
+      margin: 0 auto;
+
+      .textC {
+        margin-bottom: 40px;
+
+        @include mobile {
+          margin-bottom: 30px;
+        }
+      }
+
+      .buttonC {
+        display: block;
+        max-width: 211px;
+
+        @include mobile {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

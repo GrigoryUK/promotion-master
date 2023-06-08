@@ -161,4 +161,25 @@
       }
     }
   }
+
+  &.blockImageBig--company--small {
+    .blockImageBig {
+
+      &__block {
+        max-width: calc(477px + 70px + 70px);
+        padding: 0 70px;
+
+        @include mobile {
+          padding: 0 40px;
+        }
+
+        &--texts {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
 }

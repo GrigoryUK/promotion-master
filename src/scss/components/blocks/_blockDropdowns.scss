@@ -61,8 +61,9 @@
                 background: var(--white-primary);
 
                 i {
-                  transform: rotate(-180deg);
-                  margin-top: 2px;
+                  top: 54%;
+                  transform: translate(-50%, -50%) rotate(-180deg);
+                  //margin-top: 2px;
                   svg {
                     fill: var(--red-primary);
                   }
@@ -91,6 +92,7 @@
             color: var(--black-primary);
             text-transform: uppercase;
             transition: all 0.2s ease;
+            text-align: left;
 
             @include mobile {
               font-size: 18px;
@@ -103,6 +105,8 @@
             line-height: 140%;
             opacity: 0.5;
             transition: all 0.2s ease;
+            color: var(--black-primary);
+            text-align: left;
 
             @include mobile {
               font-size: 12px;
@@ -130,7 +134,11 @@
             }
 
             i {
-              margin-top: -2px;
+              //margin-top: -2px;
+              position: absolute;
+              top: 49%;
+              left: 50%;
+              transform: translate(-50%, -50%);
               transition: all 0.3s ease-in-out;
               svg {
                 fill: var(--white-primary);

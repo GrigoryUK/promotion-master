@@ -2,7 +2,8 @@
 
   &.blockGrid--primary {
     .buttonC {
-      display: block;
+      display: flex;
+      justify-content: center;
       margin-top: 35px;
       max-width: 211px;
 
@@ -26,6 +27,20 @@
           grid-template-columns: repeat(1, 1fr);
           gap: 30px;
         }
+
+        .itemC {
+          align-self: start;
+        }
+      }
+    }
+  }
+
+  &.blockGrid--more {
+
+    .itemC--article {
+
+      &:nth-child(n + 16) {
+        display: none;
       }
     }
   }

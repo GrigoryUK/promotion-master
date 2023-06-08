@@ -1,0 +1,159 @@
+.blockTabs {
+
+  &.blockTabs--primary {
+
+
+    .tabs {
+
+      &.tabs--primary {
+
+        .tabs__panel {
+          animation: anime 1s;
+          @keyframes anime {
+            from{opacity: 0}
+            to{opacity: 1}
+          }
+        }
+
+        .tabs__nav {
+          padding: 0;
+          column-gap: 10px;
+          row-gap: 15px;
+          margin: 0 0 50px;
+          flex-wrap: wrap;
+
+          @include mobile {
+            margin: 0;
+            gap: 0;
+            flex-direction: column;
+            width: 100%;
+            display: block;
+          }
+
+
+          &-btn {
+            position: relative;
+            background: var(--white-secondary);
+            border: none;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: var(--black-primary);
+            border-radius: 100px;
+            padding: 12px 19px 13px;
+            cursor: pointer;
+
+            @include mobile {
+              padding: 12px 15px 13px;
+              border-radius: 0;
+              border-bottom: 1px solid #E3E3E3;
+              width: 100%;
+              text-align: left;
+
+              &:before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                right: 18px;
+                top: 45%;
+                transform: translateY(-50%) rotate(45deg);
+
+                height: 0.8em;
+                width: 0.4em;
+                border-bottom: 0.15em solid var(--red-primary);
+                border-right: 0.15em solid var(--red-primary);
+                transition: all 0.2s ease;
+                opacity: 0;
+                visibility: hidden;
+              }
+            }
+
+
+            &--active {
+              background: var(--red-primary);
+              color: var(--white-primary);
+
+              @include mobile {
+                background: var(--white-secondary);
+                color: var(--red-primary);
+
+                &::before {
+                  opacity: 1;
+                  visibility: visible;
+                }
+              }
+
+
+            }
+          }
+
+
+        }
+
+        .tab-to-dropdown {
+
+          @include mobile {
+            position: relative;
+            margin-bottom: 50px;
+
+            &.active {
+
+              .selected-tab {
+
+                &::after {
+                  top: 50%;
+                  transform: translate(0, -50%) rotate(-315deg);
+                }
+              }
+            }
+          }
+
+        }
+
+        .selected-tab {
+
+          @include mobile {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 15px;
+            color: var(--white-primary);
+            background: var(--red-primary);
+            padding: 17px 15px 18px;
+            position: relative;
+
+
+
+            &::after {
+              content: "";
+              width: 6px;
+              height: 6px;
+              border: solid var(--white-primary);
+              border-width: 1.5px 0 0 1.5px;
+              transform: translate(0, -50%) rotate(-135deg);
+              position: absolute;
+              right: 18px;
+              top: 46%;
+              transition: all 0.4s ease-in-out;
+            }
+          }
+        }
+
+        .converted-tab {
+
+          @include mobile {
+            position: absolute;
+            background: var(--white-secondary);
+            overflow: hidden;
+            overflow-y: auto;
+
+            &.active {
+              height: 405px;
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}

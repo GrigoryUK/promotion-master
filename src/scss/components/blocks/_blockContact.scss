@@ -28,6 +28,10 @@
         border: 1px solid var(--red-primary);
         padding: 101px 113px 100px;
 
+        &--box {
+          position: relative;
+        }
+
         @include tablet {
           padding: 40px 30px 70px;
         }
@@ -120,18 +124,17 @@
             position: absolute;
             left: 0;
             bottom: -40px;
-            transition: all 0.2s ease;
-            opacity: 0;
-            visibility: visible;
+            //transition: all 0.2s ease;
+            display: none;
             @include mobile {
               bottom: -30px;
-              font-size: 14px;
+              font-size: 13px;
             }
 
-            &.error {
-              opacity: 1;
-              visibility: visible;
-            }
+            //&.error {
+            //  opacity: 1;
+            //  visibility: visible;
+            //}
 
           }
         }
@@ -144,14 +147,10 @@
         background: var(--white-primary);
         top: 0;
         left: 0;
-        transition: all 0.3s ease-in-out;
-        opacity: 0;
-        visibility: hidden;
+        display: none;
 
-        &.success {
-          opacity: 1;
-          visibility: visible;
-        }
+
+
       }
     }
   }

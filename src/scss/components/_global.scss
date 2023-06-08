@@ -38,6 +38,10 @@
     align-items: center;
     justify-content: center;
 
+    @include hover {
+      background: var(--red-primary-hover);
+    }
+
     i {
       position: relative;
       max-width: 10px;
@@ -94,6 +98,24 @@
     line-height: 160%;
     text-transform: uppercase;
     color: var(--white-primary);
+
+    @include hover {
+      background: var(--red-primary-hover);
+    }
+  }
+
+  &.buttonC--more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+
+    @include hover {
+
+      .donat {
+        border-top-color: var(--red-primary-hover);
+      }
+    }
   }
 }
 
@@ -144,6 +166,26 @@
     margin-bottom: 50px;
 
     @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+
+  &.mb--small {
+    margin-bottom: 20px;
+  }
+
+  &.max--width {
+    max-width: 1000px;
+  }
+
+  &.mb--normal {
+    margin-bottom: 48px;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
       margin-bottom: 30px;
     }
   }
@@ -254,6 +296,19 @@
       }
     }
   }
+
+  &.itemC-none {
+    display: none;
+  }
+
+  &.itemC--active {
+    display: flex !important;
+    animation: anime 1s !important;
+    @keyframes anime {
+      from{opacity: 0}
+      to{opacity: 1}
+    }
+  }
 }
 
 
@@ -341,6 +396,10 @@
       resize: none;
       height: 150px;
 
+      @include mobile {
+        height: 108px;
+      }
+
     }
   }
 }
@@ -363,3 +422,92 @@
     }
   }
 }
+
+.container__back {
+  margin-bottom: 20px;
+
+  @include mobile {
+    margin-bottom: 15px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 90px;
+    gap: 7px;
+
+    svg {
+      margin-bottom: -1px;
+      fill: var(--red-primary);
+    }
+
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+
+    }
+
+    @include hover {
+      color: var(--red-primary);
+    }
+  }
+}
+
+.dataC {
+
+  &.dataC--primary {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--black-secondary);
+    opacity: 0.4;
+
+
+  }
+
+  &.mb--standard {
+    margin-bottom: 36px;
+
+    @include tablet {
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.mb--130 {
+  margin-bottom: 130px;
+
+  @include tablet {
+    margin-bottom: 100px;
+  }
+
+  @include mobile {
+    margin-bottom: 70px;
+  }
+}
+
+
+.donat {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 0.2rem solid var(--white-secondary);
+  //border-top-color: #c7c7c7;
+  border-top-color: var(--red-primary);
+  animation: 1.5s spin infinite linear;
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+

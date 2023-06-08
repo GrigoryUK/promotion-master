@@ -1,0 +1,15 @@
+.pageServices {
+
+
+  &__container {
+    margin-bottom: 130px;
+
+    @include tablet {
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
+  }
+}

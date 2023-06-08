@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+<div id="top"></div>
+<div class="site-container">
+  @include('partials/header.html')
+  <div class="breadcrumb__content">
+    <div class="container">
+      <div class="breadcrumb__container">
+        <div class="breadcrumbs mb--small">
+          <span class="first-item"><a href="home.html">Главная</a></span>
+          <span class="separator">-</span>
+          <span class="last-item">О компании</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  @include('partials/pageCompany.html')
+  @include('partials/footer.html')
+
+</div>
+</body>
+
+</html>

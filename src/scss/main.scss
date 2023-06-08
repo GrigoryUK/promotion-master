@@ -12,11 +12,21 @@
 @import "./components/base/menu";
 @import "./components/base/feedback";
 @import "./components/base/footer";
+@import "./components/base/breadcrumbs";
 @import "./components/blocks/blockImageBig";
 @import "./components/blocks/blockGrid";
 @import "./components/blocks/blockContact";
 @import "./components/blocks/blockDropdowns";
+@import "./components/blocks/blockArticle";
+@import "./components/blocks/blockTabs";
 @import "./components/pages/pageHome";
+@import "./components/pages/pageError";
+@import "./components/pages/pageContact";
+@import "./components/pages/pageBlog";
+@import "./components/pages/pageServices";
+@import "./components/pages/pageCompany";
+@import "./components/pages/pageArticle";
+@import "./components/pages/pageService";
 
 
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+<div id="top"></div>
+<div class="site-container">
+  @include('partials/header.html')
+  <div class="breadcrumb__content">
+    <div class="container">
+      <div class="breadcrumb__container">
+        <div class="breadcrumbs mb--standard">
+          <span class="first-item"><a href="home.html">Главная</a></span>
+          <span class="separator">-</span>
+          <span class="last-item">Контакты</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container--start">
+    <div class="container">
+      <div class="titleC titleC--primary titleC--black centered mb--standard">
+        <h1>Контакты</h1>
+      </div>
+    </div>
+  </div>
+  @include('partials/pageContact.html')
+  @include('partials/footer.html')
+
+</div>
+</body>
+
+</html>

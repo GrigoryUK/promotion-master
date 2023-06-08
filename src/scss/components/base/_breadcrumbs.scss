@@ -1,0 +1,90 @@
+.breadcrumbs {
+  margin-top: 10px;
+  line-height: 1;
+
+  &.mb--standard {
+    margin-bottom: 45px;
+
+    @include tablet {
+      margin-bottom: 42px;
+    }
+    @include mobile {
+      margin-bottom: 26px;
+    }
+  }
+
+  &.mb--small {
+    margin-bottom: 12px;
+
+
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.mb--big {
+    margin-bottom: 30px;
+
+    @include tablet {
+      margin-bottom: 27px;
+    }
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include tablet {
+    margin-top: 14px;
+  }
+
+  @include mobile {
+    margin-top: 10px;
+  }
+
+  span {
+    line-height: 1;
+  }
+
+  span > a {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--black-secondary);
+    opacity: 0.5;
+
+    @include mobile {
+      font-size: 10px;
+    }
+
+    @include hover {
+      opacity: 1;
+    }
+  }
+
+  .separator {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--black-secondary);
+    opacity: 0.5;
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+
+  .last-item {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.4;
+    color: var(--black-secondary);
+    opacity: 0.5;
+    cursor: not-allowed;
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

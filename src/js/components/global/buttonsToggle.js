@@ -13,12 +13,12 @@ export default function buttonsToggleJs() {
 
     if (menu) {
       buttonOpen.on('click', function () {
-        menu.fadeIn()
+        menu.fadeIn('fast')
         disableScrollCustom()
       })
 
       buttonClose.on('click', function () {
-        menu.fadeOut()
+        menu.fadeOut('slow')
         enableScrollCustom()
       })
     }
@@ -59,7 +59,7 @@ export default function buttonsToggleJs() {
         e.preventDefault();
         menu.find('.feedback__connection').removeClass('active');
         menuMain.fadeOut('fast');
-        menu.fadeOut('fast');
+        menu.fadeOut('slow');
         if (isDesktop()) {
           disableScroll.off()
         }
