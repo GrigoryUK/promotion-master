@@ -1,13 +1,51 @@
 
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
-  --container-offset: 15px;
+  --font-family: "Helvetica", "Aquawax Pro", sans-serif;
+  --content-width: 1338px;
+  --container-offset: 50px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
 
+  // font
+  --font-primary: "Helvetica", sans-serif;
+  --font-secondary: "Aquawax Pro", sans-serif;
+
   // colors
-  --white: #fff;
-  --black: #0000;
-  --beige:  #FFF8F0;
+  --white-primary: #ffffff;
+  --white-secondary: #F6F6F6;
+  --white-secondary-hover: #F7F7F7;
+  --white-third: #EAEAEA;
+  --black-primary: #181818;
+  --black-secondary: #000000;
+  --red-primary: #EF0D37;
+
+  // f-size
+
+  --font-size-xl: 32px;
+  --font-size-l: 28px;
+  --font-size-ml: 24px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xs: 13px;
+  --font-size-xxs: 12px;
+
+  // z-index
+  --z-footer-btn-arrow: 3;
+  --z-header-search: 11;
+  --z-header-sub: -1;
+  --z-header-sub-footer: 1;
+  --z-header-feedback-close: 1;
+  --z-header-fixed: 4;
+  --z-feedback: 6;
+  --z-menu: 5;
+  --z-index-tabs-dropdown: 3;
+  --z-index-button-item-catalog: 3;
+  --z-buttons-swiper-organizations: 3;
+
+  // height
+
+  --height-header-desk: 160.39px;
+  --height-header-laptop: 159.8px;
+  --height-header-laptop-min: 217.59px;
+  --height-header-tablet: 81px;
 }

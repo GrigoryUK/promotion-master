@@ -5,11 +5,18 @@
 @import "settings";
 
 // подключения компонентов страницы
-@import "./components/base/fonts";
-@import "./components/base/btn";
 @import "./components/index";
+@import "./components/global";
+@import "./components/base/btn";
 @import "./components/base/header";
+@import "./components/base/menu";
+@import "./components/base/feedback";
 @import "./components/base/footer";
+@import "./components/blocks/blockImageBig";
+@import "./components/blocks/blockGrid";
+@import "./components/blocks/blockContact";
+@import "./components/blocks/blockDropdowns";
+@import "./components/pages/pageHome";
 
 
 

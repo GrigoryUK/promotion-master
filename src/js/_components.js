@@ -1,3 +1,3 @@
 console.log('components');
 // import './components/expamle';
-import './components/code';
+import './components/app';

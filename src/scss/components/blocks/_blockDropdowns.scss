@@ -1,0 +1,230 @@
+.blockDropdowns {
+
+  &.blockDropdowns--primary {
+
+    .container {
+      @include mobile {
+        padding: 0;
+      }
+    }
+
+    .blockDropdowns {
+
+      &__content {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+
+        @include mobile {
+          gap: 4px;
+        }
+      }
+    }
+    .dropdown {
+
+      &.dropdown--primary {
+        width: 100%;
+        .dropdown {
+
+          &__button {
+            display: flex;
+            padding: 32px 35px 30px;
+            background: var(--white-secondary);
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+
+
+            @include tablet {
+              padding: 37px 20px 35px;
+            }
+
+            @include mobile {
+              padding: 20px 15px;
+            }
+
+            &.open {
+              background: var(--red-primary);
+
+              .dropdown__title {
+                color: var(--white-primary);
+              }
+
+              .dropdown__text {
+                color: var(--white-primary);
+              }
+
+              .dropdown__arrow {
+                background: var(--white-primary);
+
+                i {
+                  transform: rotate(-180deg);
+                  margin-top: 2px;
+                  svg {
+                    fill: var(--red-primary);
+                  }
+                }
+              }
+            }
+
+          }
+
+          &__left {
+            max-width: 382px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: all 0.2s ease;
+
+            span {
+              display: block;
+            }
+          }
+
+          &__title {
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 140%;
+            color: var(--black-primary);
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+
+            @include mobile {
+              font-size: 18px;
+            }
+          }
+
+          &__text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            opacity: 0.5;
+            transition: all 0.2s ease;
+
+            @include mobile {
+              font-size: 12px;
+            }
+          }
+
+          &__arrow {
+            position: relative;
+            min-width: 60px;
+            max-width: 60px;
+            min-height: 60px;
+            max-height: 60px;
+            border-radius: 100%;
+            background: var(--red-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+
+            @include mobile {
+              min-width: 50px;
+              max-width: 50px;
+              min-height: 50px;
+              max-height: 50px;
+            }
+
+            i {
+              margin-top: -2px;
+              transition: all 0.3s ease-in-out;
+              svg {
+                fill: var(--white-primary);
+              }
+            }
+          }
+
+          &__content {
+            overflow: hidden;
+            padding: 0;
+            max-height: 0;
+            box-sizing: content-box;
+            opacity: 0;
+            transition: all 0.4s ease-out;
+            will-change: max-height;
+
+
+            &.open {
+              opacity: 1;
+              padding-top: 50px;
+              padding-bottom: 80px;
+
+              @include mobile {
+                padding-top: 30px;
+                padding-bottom: 50px;
+              }
+            }
+
+            &--box {
+              @include mobile {
+                padding: 0 15px;
+              }
+            }
+
+          }
+
+          &__block {
+            max-width: 1114px;
+            margin: 0 auto;
+
+
+            &:not(:last-child) {
+              padding-bottom: 50px;
+              border-bottom: 1px solid var(--white-third);
+              @include mb(50px);
+
+              @include mobile {
+                padding-bottom: 40px;
+                @include mb(30px);
+              }
+            }
+
+            &--title {
+              font-weight: 400;
+              font-size: 24px;
+              line-height: 140%;
+              margin-bottom: 20px;
+
+              @include mobile {
+                font-size: 20px;
+              }
+            }
+
+            &--text {
+              margin-bottom: 35px;
+
+              @include mobile {
+                margin-bottom: 30px;
+              }
+              p {
+                margin: 0;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 140%;
+                opacity: 0.7;
+                @include mb(2em);
+
+                @include mobile {
+                  font-size: 16px;
+                }
+              }
+            }
+
+            .buttonC {
+              display: block;
+              max-width: 211px;
+
+              @include mobile {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
