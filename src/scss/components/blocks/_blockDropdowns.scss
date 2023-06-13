@@ -37,6 +37,12 @@
             justify-content: space-between;
             transition: all 0.2s ease;
 
+            @include hover {
+              &:not(.open) {
+                background: var(--white-third);
+              }
+            }
+
 
             @include tablet {
               padding: 37px 20px 35px;

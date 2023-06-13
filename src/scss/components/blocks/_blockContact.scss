@@ -111,7 +111,7 @@
               color: #747474;
 
               @include hover {
-                color: var(--red-primary);
+                color: var(--black-primary);
               }
             }
           }
@@ -119,22 +119,20 @@
           &__warning {
             color: var(--red-primary);
             font-weight: 400;
-            font-size: 16px;
+            font-size: 12px;
             line-height: 140%;
             position: absolute;
+            opacity: 0.7;
             left: 0;
             bottom: -40px;
-            //transition: all 0.2s ease;
             display: none;
             @include mobile {
               bottom: -30px;
-              font-size: 13px;
+              left: 4px;
+              font-size: 11px;
             }
 
-            //&.error {
-            //  opacity: 1;
-            //  visibility: visible;
-            //}
+
 
           }
         }
@@ -148,6 +146,47 @@
         top: 0;
         left: 0;
         display: none;
+
+        &--box {
+          padding-top: 50px;
+
+          @include mobile {
+            padding-top: 100px;
+          }
+
+          svg {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 50px;
+
+            @include mobile {
+              width: 80px;
+              height: 80px;
+              margin-bottom: 30px;
+            }
+          }
+
+          .titleC {
+            margin-bottom: 20px;
+          }
+
+          .textC {
+            margin-bottom: 60px;
+
+            @include mobile {
+              margin-bottom: 35px;
+            }
+          }
+
+          .buttonC {
+            display: block;
+            max-width: 211px;
+
+            @include mobile {
+              max-width: 100%;
+            }
+          }
+        }
 
 
 

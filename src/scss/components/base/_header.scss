@@ -66,6 +66,12 @@
           line-height: 160%;
           text-align: center;
           text-transform: uppercase;
+
+
+          @include hover {
+            background: var(--red-primary);
+            color: var(--white-primary);
+          }
         }
       }
     }
@@ -167,9 +173,10 @@
         font-size: 11px;
         line-height: 13px;
         opacity: 0.5;
+        color: var(--black-secondary);
 
         @include hover {
-          color: var(--red-primary);
+          color: var(--black-secondary);
           opacity: 1;
         }
       }

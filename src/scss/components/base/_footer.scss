@@ -51,6 +51,10 @@
       gap: 428px;
 
       &--desk {
+
+        @include big-desktop {
+          gap: 416px;
+        }
         @include tablet {
           display: none;
         }
@@ -84,7 +88,7 @@
       &--box {
         display: flex;
         align-items: center;
-        gap: 62px;
+        gap: 66px;
 
         @include tablet {
           flex-direction: column;
@@ -101,11 +105,14 @@
           font-weight: 300;
           font-size: 12px;
           line-height: 150%;
-          text-decoration-line: underline;
+
           color: var(--black-primary);
 
-          @include hover {
-            color: var(--red-primary);
+          &:first-child {
+            text-decoration-line: underline;
+            @include hover {
+              opacity: 0.5;
+            }
           }
         }
 
@@ -115,7 +122,14 @@
             font-weight: 300;
             font-size: 12px;
             line-height: 150%;
-            margin-right: 0.3em;
+            margin-left: 0.3em;
+            text-decoration-line: underline;
+          }
+
+          @include hover {
+            span {
+              color: var(--red-primary);
+            }
           }
         }
       }
@@ -354,6 +368,19 @@
                   display: block;
                   width: 42px;
                   height: 42px;
+
+                  svg {
+
+                    &:first-child {
+
+
+                    }
+                  }
+
+                  @include hover {
+
+
+                  }
                 }
               }
             }

@@ -162,6 +162,15 @@
     color: var(--black-primary);
   }
 
+  &.titleC--policy {
+    max-width: 1074px;
+    margin: 0 auto 70px;
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
+  }
+
   &.mb--standard {
     margin-bottom: 50px;
 
@@ -189,6 +198,8 @@
       margin-bottom: 30px;
     }
   }
+
+
 }
 
 .textC {
@@ -347,9 +358,11 @@
 .inputC {
 
   &.primary {
+    position: relative;
     width: 100%;
     input,
     textarea {
+      position: relative;
       border-radius: 0;
       font-size: 16px;
       line-height: 160%;
@@ -358,6 +371,7 @@
       width: 100%;
       padding: 11px 20px 13px;
       border: none;
+      border-bottom: 1px solid var(--white-secondary);
       outline: none;
       transition: all 0.2s ease;
 
@@ -371,35 +385,47 @@
       }
 
       @include hover {
-        background: var(--white-secondary-hover);
-
-        &::placeholder {
-          opacity: 1;
-        }
+        background: var(--white-third);
       }
 
-      &:focus {
-        background: var(--white-secondary-hover);
-
-        &::placeholder {
-          opacity: 1;
-        }
+      &.focus-visible {
+        background: var(--white-third);
       }
+
 
       &.error {
         color: var(--red-primary);
-        background: var(--red-error);
+        border-bottom: 1px solid var(--red-primary);
+
+        &::placeholder {
+          color: var(--red-primary);
+          opacity: 1;
+        }
       }
     }
 
     textarea {
       resize: none;
       height: 150px;
+    }
 
-      @include mobile {
-        height: 108px;
+    .inputC {
+
+      &__warning {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 160%;
+        color: var(--red-primary-hover);
+        opacity: 0.7;
+        display: none;
+
+        @include mobile {
+          right: 15px;
+        }
       }
-
     }
   }
 }
@@ -417,7 +443,8 @@
       color: #747474;
 
       @include hover {
-        color: var(--red-primary);
+        opacity: 1;
+        color: var(--black-secondary);
       }
     }
   }
@@ -510,4 +537,47 @@
   }
 }
 
+.icon-social {
+  background: #EBEBEB;
+  width: 42px;
+  height: 42px;
+  position: relative;
+  border-radius: 100px;
+  svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
+  }
+
+  &-tg {
+
+    svg {
+      fill: #2BA3D6;
+    }
+
+    @include hover {
+      background: #2BA3D6;
+
+      svg {
+        fill: var(--white-primary);
+      }
+    }
+  }
+
+  &-wp {
+
+    svg {
+      fill: #25D366;
+    }
+
+    @include hover {
+      background: #25D366;
+
+      svg {
+        fill: #ffffff;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.pagePolicy {
+
+
+  &__content {
+    max-width: 1074px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+
+    @include mobile {
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 2em;
+    }
+
+    ol {
+      counter-reset: item;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ol > li {
+      display: block;
+      margin-bottom: 0.2em;
+    }
+
+    ol > li::before {
+      counter-increment: item;
+      content: counters(item, ".") " ";
+    }
+
+    ol > li > ol {
+      margin: 2em 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0 0 0 30px;
+
+      @include mobile {
+        padding-left: 20px;
+      }
+    }
+
+    ul > li  {
+      position: relative;
+      &::before {
+        @include pseudo;
+        max-width: 5px;
+        min-width: 5px;
+        max-height: 5px;
+        min-height: 5px;
+        border-radius: 100%;
+        background: var(--black-secondary);
+        position: absolute;
+        left: -1em;
+        top: 10px;
+
+      }
+    }
+  }
+}

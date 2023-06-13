@@ -14,21 +14,36 @@
               <div class="formC__inputs--row">
                 <div class="inputC primary">
                   <input type="text" placeholder="Представьтесь">
+                  <div class="inputC__warning">
+                    Неверное значение
+                  </div>
                 </div>
                 <div class="inputC primary">
                   <input type="text" placeholder="Ваша компания">
+                  <div class="inputC__warning">
+                    Неверное значение
+                  </div>
                 </div>
               </div>
               <div class="formC__inputs--row">
                 <div class="inputC primary">
                   <input class="test-tel" type="tel" placeholder="Телефон*">
+                  <div class="inputC__warning">
+                    Неверное значение
+                  </div>
                 </div>
                 <div class="inputC primary">
-                  <input type="email" placeholder="E-mail">
+                  <input class="test-email" type="email" placeholder="E-mail">
+                  <div class="inputC__warning">
+                    Неверное значение
+                  </div>
                 </div>
               </div>
               <div class="inputC primary">
                 <textarea type="text" placeholder="Что вас интересует?"></textarea>
+                <div class="inputC__warning">
+                  Неверное значение
+                </div>
               </div>
 
             </div>
@@ -37,13 +52,28 @@
                 Отправить
               </button>
               <div class="formC__copyright">
-                Нажимая кнопку отправить, вы соглашаетесь с нашей <a href="">политикой конфедециальности</a>
+                Нажимая кнопку отправить, вы соглашаетесь с нашей <a href="">политикой конфиденциальности</a>
               </div>
               <div class="formC__warning">
-                Неверно введеное значение, попробуйте еще раз.
+                Введено невeрное значение, пожалуйста попробуйте еще раз.
               </div>
             </div>
-            <div class="blockContact__success"></div>
+            <div class="blockContact__success">
+              <div class="blockContact__success--box">
+                <svg class="" viewBox="0 0 100 100">
+                  <use xlink:href="img/sprite.svg#icon-feedback-done"></use>
+                </svg>
+                <div class="titleC titleC--primary titleC--black">
+                  Заявка успешно отправлена!
+                </div>
+                <div class="textC textC--secondary textC--black">
+                  В ближайшее время наш менеджер свяжется с вами.
+                </div>
+                <a href="home.html" class="buttonC buttonC--primary">
+                  на главную
+                </a>
+              </div>
+            </div>
           </form>
         </div>
 
