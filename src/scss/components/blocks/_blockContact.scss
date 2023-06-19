@@ -26,35 +26,42 @@
         position: relative;
         border-radius: 10px;
         border: 1px solid var(--red-primary);
-        padding: 101px 113px 100px;
+        padding: 51px 113px 70px;
+
+
+        @include tablet {
+          padding: 30px 30px 50px;
+        }
+
+        @include mobile {
+          padding: 30px 13px 50px 14px;
+        }
+
 
         &--box {
           position: relative;
         }
 
-        @include tablet {
-          padding: 40px 30px 70px;
-        }
-
-        @include mobile {
-          padding: 40px 13px 50px 14px;
-        }
 
         .titleC {
           margin-bottom: 20px;
 
           @include mobile {
-            margin-bottom: 10px;
+            margin-bottom: 2px;
           }
         }
 
         .textC {
           max-width: 667px;
-          margin-bottom: 50px;
+          margin-bottom: 30px;
+
+          @include tablet {
+            margin-bottom: 40px;
+          }
 
           @include mobile {
-            margin-bottom: 30px;
-            max-width: 95%;
+            margin-bottom: 20px;
+            max-width: 310px;
           }
         }
 
@@ -67,6 +74,9 @@
             gap: 15px;
             margin-bottom: 35px;
 
+            @include mobile {
+              margin-bottom: 25px;
+            }
 
 
             &--row {
@@ -133,7 +143,6 @@
             }
 
 
-
           }
         }
       }
@@ -187,7 +196,6 @@
             }
           }
         }
-
 
 
       }

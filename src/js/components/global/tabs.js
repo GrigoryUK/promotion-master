@@ -1,7 +1,6 @@
-import $ from 'jquery';
-import jQuery from 'jquery';
-import GraphTabs from 'graph-tabs';
-import {isMobile} from "../../functions/check-viewport";
+import GraphTabs from 'graph-tabs'
+import { default as $, default as jQuery } from 'jquery'
+import { isMobile } from "../../functions/check-viewport"
 
 export default function tabsJs() {
 
@@ -18,7 +17,7 @@ export default function tabsJs() {
 
       const settings = $.extend({
         activeClass: "active",
-        screenSize: 767,
+        screenSize: 576,
       }, options );
 
       return this.each(function(i) {
@@ -90,6 +89,7 @@ export default function tabsJs() {
       screenSize: 576,
     });
   })();
+
 
   (function maxItemDropdown(){
     if (isMobile()) {

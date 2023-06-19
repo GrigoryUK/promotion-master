@@ -360,6 +360,17 @@
   &.primary {
     position: relative;
     width: 100%;
+
+    &.big-textarea {
+      textarea {
+        height: 150px;
+
+        @include mobile {
+          height: 100px;
+        }
+      }
+    }
+
     input,
     textarea {
       position: relative;
@@ -406,7 +417,7 @@
 
     textarea {
       resize: none;
-      height: 150px;
+      height: 100px;
     }
 
     .inputC {
@@ -427,6 +438,11 @@
         }
       }
     }
+  }
+
+  &.secondary {
+
+
   }
 }
 
