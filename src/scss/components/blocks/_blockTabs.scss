@@ -1,17 +1,16 @@
 .blockTabs {
-
   &.blockTabs--primary {
-
-
     .tabs {
-
       &.tabs--primary {
-
         .tabs__panel {
           animation: anime 1s;
           @keyframes anime {
-            from{opacity: 0}
-            to{opacity: 1}
+            from {
+              opacity: 0;
+            }
+            to {
+              opacity: 1;
+            }
           }
         }
 
@@ -30,7 +29,6 @@
             display: block;
           }
 
-
           &-btn {
             position: relative;
             background: var(--white-secondary);
@@ -46,7 +44,7 @@
             @include mobile {
               padding: 12px 15px 13px;
               border-radius: 0;
-              border-bottom: 1px solid #E3E3E3;
+              border-bottom: 1px solid #e3e3e3;
               width: 100%;
               text-align: left;
 
@@ -68,7 +66,6 @@
               }
             }
 
-
             &--active {
               background: var(--red-primary);
               color: var(--white-primary);
@@ -82,24 +79,17 @@
                   visibility: visible;
                 }
               }
-
-
             }
           }
-
-
         }
 
         .tab-to-dropdown {
-
           @include mobile {
             position: relative;
             margin-bottom: 50px;
 
             &.active {
-
               .selected-tab {
-
                 &::after {
                   top: 50%;
                   transform: translate(0, -50%) rotate(-315deg);
@@ -107,11 +97,9 @@
               }
             }
           }
-
         }
 
         .selected-tab {
-
           @include mobile {
             font-weight: 400;
             font-size: 13px;
@@ -120,8 +108,6 @@
             background: var(--red-primary);
             padding: 17px 15px 18px;
             position: relative;
-
-
 
             &::after {
               content: "";
@@ -139,7 +125,6 @@
         }
 
         .converted-tab {
-
           @include mobile {
             position: absolute;
             background: var(--white-secondary);
@@ -150,8 +135,6 @@
               height: 405px;
             }
           }
-
-
         }
       }
     }

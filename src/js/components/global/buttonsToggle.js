@@ -1,7 +1,8 @@
-import $ from 'jquery';
-import {isDesktop, isMobile, isTablet} from "../../functions/check-viewport";
-import disableScroll from 'disable-scroll';
-import {disableScrollCustom, enableScrollCustom} from "../library/scrollMove";
+import disableScroll from 'disable-scroll'
+import $ from 'jquery'
+import { isDesktop, isMobile, isTablet } from "../../functions/check-viewport"
+// import {disableScrollCustom, enableScrollCustom} from "../library/scrollMove";
+import scrollLock from 'scroll-lock'
 
 
 export default function buttonsToggleJs() {
@@ -14,12 +15,12 @@ export default function buttonsToggleJs() {
     if (menu) {
       buttonOpen.on('click', function () {
         menu.fadeIn('fast')
-        disableScrollCustom()
+        scrollLock.disablePageScroll();
       })
 
       buttonClose.on('click', function () {
-        menu.fadeOut('slow')
-        enableScrollCustom()
+        menu.fadeOut('fast')
+        scrollLock.enablePageScroll();
       })
     }
   }());
@@ -41,7 +42,7 @@ export default function buttonsToggleJs() {
           disableScroll.on()
         }
         if (isMobile() || isTablet()) {
-          disableScrollCustom()
+          scrollLock.disablePageScroll();
         }
         menu.fadeIn('fast', function () {
           menu.find('.feedback__connection').addClass('active');
@@ -64,7 +65,7 @@ export default function buttonsToggleJs() {
           disableScroll.off()
         }
         if (isMobile() || isTablet()) {
-          enableScrollCustom()
+          scrollLock.enablePageScroll();
         }
       })
     }
